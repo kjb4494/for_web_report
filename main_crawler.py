@@ -6,15 +6,6 @@ from filtering_helper import strip_html_tag, remove_globals_attribute
 from attributes_dict import AttributesDict
 
 excepted_elements = [
-    # header
-    'Element',
-    'Description',
-    'Categories',
-    'Parents†',
-    'Children',
-    'Attributes',
-    'Interface',
-    # except tag
     # 1
     'html', 'head', 'base', 'title', 'body',
     # 2
