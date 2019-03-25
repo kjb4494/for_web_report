@@ -35,8 +35,8 @@ excepted_elements = [
 
 if __name__ == "__main__":
     html = urlopen("https://www.w3.org/TR/html5/fullindex.html")
-    bsObject = BeautifulSoup(html, "html.parser")
-    tables = bsObject.find_all('table')
+    bs_object = BeautifulSoup(html, "html.parser")
+    tables = bs_object.find_all('table')
     table_rows = tables[TableEnum.ELEMENTS].find_all("tr")
 
     index_count = 1

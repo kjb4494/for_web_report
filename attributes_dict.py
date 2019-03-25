@@ -6,6 +6,7 @@ from filtering_helper import strip_html_tag
 
 search_limit_count = 10
 
+
 class AttributesDict:
     def __init__(self):
         self._attr_dict = {}
