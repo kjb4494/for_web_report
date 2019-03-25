@@ -5,6 +5,8 @@ from enum_pack import TableEnum
 from filtering_helper import strip_html_tag, remove_globals_attribute
 from attributes_dict import AttributesDict
 
+from example_crawler import ExampleCrawler
+
 excepted_elements = [
     # 1
     'html', 'head', 'base', 'title', 'body',
@@ -57,7 +59,8 @@ if __name__ == "__main__":
                 print('\t{}. {}: {}'.format(
                     str(i).zfill(2), att_attribute, attr_dict.get_description(att_attribute, striped_att_element)
                 ))
-        print('- 예시')
+        ec = ExampleCrawler(striped_att_element)
+        print(ec.get_crawled_string())
         print()
 
         index_count += 1
