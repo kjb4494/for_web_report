@@ -57,7 +57,6 @@ if __name__ == "__main__":
                 print('\t{}. {}: {}'.format(
                     str(i).zfill(2), att_attribute, attr_dict.get_description(att_attribute, striped_att_element)
                 ))
-                print('\t- 예시 ')
         print('- 예시')
         print()
 
