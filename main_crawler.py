@@ -6,6 +6,8 @@ from filtering_helper import strip_html_tag, remove_globals_attribute
 from attributes_dict import AttributesDict
 
 from desc_and_example_crawler import DescAndExampleCrawler
+from trans_ko import google_trans_ko
+
 
 excepted_elements = [
     # 1
@@ -51,8 +53,8 @@ if __name__ == "__main__":
 
         ecm = DescAndExampleCrawler(striped_att_element)
 
-        print('{}. {}\n{}'.format(
-            str(index_count).zfill(3), striped_att_element, ecm.get_desc_string()
+        print('{}. {}\n{}\n{}'.format(
+            str(index_count).zfill(3), striped_att_element, google_trans_ko(ecm.get_desc_string()), ecm.get_desc_string()
         ))
         print('- 속성', end='')
         if striped_att_attributes[0] == '':
@@ -61,8 +63,8 @@ if __name__ == "__main__":
             print()
             for i, att_attribute in enumerate(striped_att_attributes, start=1):
                 ec = DescAndExampleCrawler(striped_att_element, 'attr', att_attribute)
-                print('{}. {}\n{}'.format(
-                    str(i).zfill(2), att_attribute, ec.get_desc_string()
+                print('{}. {}\n{}\n{}'.format(
+                    str(i).zfill(2), att_attribute, google_trans_ko(ec.get_desc_string()), ec.get_desc_string()
                 ))
                 print('- 예시')
                 print(ec.get_crawled_string())

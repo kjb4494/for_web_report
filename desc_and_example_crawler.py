@@ -39,9 +39,16 @@ class DescAndExampleCrawler:
                 if start_recoding:
                     if tag.name != 'p' or 'Note:' in tag.text or 'Tip:' in tag.text or 'element:' in tag.text:
                         break
-                    self._desc_string += tag.text + '\n'
+                    self._desc_string += tag.text + ' '
                 if tag.text == 'Definition and Usage':
                     start_recoding = True
+            self._desc_string = self._desc_string.encode('utf-8')
+            self._desc_string = self._desc_string.replace(b'\r\n', b' ')
+            self._desc_string = self._desc_string.replace(b'<', b'\'')
+            self._desc_string = self._desc_string.replace(b'>', b'\'')
+            for i in range(5):
+                self._desc_string = self._desc_string.replace(b'  ', b' ')
+            self._desc_string = self._desc_string.decode('utf-8')
         except:
             self._desc_string = ''
 
@@ -53,5 +60,5 @@ class DescAndExampleCrawler:
 
 
 if __name__ == '__main__':
-    ec = DescAndExampleCrawler('article')
+    ec = DescAndExampleCrawler('area')
     print(ec.get_desc_string())
