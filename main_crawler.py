@@ -5,7 +5,7 @@ from enum_pack import TableEnum
 from filtering_helper import strip_html_tag, remove_globals_attribute
 from attributes_dict import AttributesDict
 
-from example_crawler import ExampleCrawler
+from desc_and_example_crawler import DescAndExampleCrawler
 
 excepted_elements = [
     # 1
@@ -49,18 +49,26 @@ if __name__ == "__main__":
         striped_att_attributes = striped_att_attributes.split('; ')
         striped_att_description = strip_html_tag(str(att_description))
 
-        print('{}. {}: {}'.format(str(index_count).zfill(3), striped_att_element, striped_att_description))
+        ecm = DescAndExampleCrawler(striped_att_element)
+
+        print('{}. {}\n{}'.format(
+            str(index_count).zfill(3), striped_att_element, ecm.get_desc_string()
+        ))
         print('- 속성', end='')
         if striped_att_attributes[0] == '':
             print(': 없음')
         else:
             print()
             for i, att_attribute in enumerate(striped_att_attributes, start=1):
-                print('\t{}. {}: {}'.format(
-                    str(i).zfill(2), att_attribute, attr_dict.get_description(att_attribute, striped_att_element)
+                ec = DescAndExampleCrawler(striped_att_element, 'attr', att_attribute)
+                print('{}. {}\n{}'.format(
+                    str(i).zfill(2), att_attribute, ec.get_desc_string()
                 ))
-        ec = ExampleCrawler(striped_att_element)
-        print(ec.get_crawled_string())
+                print('- 예시')
+                print(ec.get_crawled_string())
+
+        print('- 예시')
+        print(ecm.get_crawled_string())
         print()
 
         index_count += 1
