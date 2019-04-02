@@ -1,0 +1,877 @@
+001. area
+'area'태그는 이미지 맵 내부의 영역을 정의합니다 (이미지 맵은 클릭 가능한 영역이있는 이미지입니다).
+'area'요소는 항상 'map'태그 안에 중첩됩니다.
+The 'area' tag defines an area inside an image-map (an image-map is an image with clickable areas). The 'area' element is always nested inside a 'map' tag.
+- 속성
+01. alt
+alt 속성은 이미지를 표시 할 수없는 경우 영역의 대체 텍스트를 지정합니다.
+alt 속성은 사용자가 어떤 이유로 든 그것을 볼 수없는 경우 (연결 속도가 느리거나 src 속성의 오류 또는 사용자가 화면 판독기를 사용하기 때문에) 이미지에 대한 대체 정보를 제공합니다.
+href 속성이있는 경우 alt 속성이 필요합니다.
+The alt attribute specifies an alternate text for an area, if the image cannot be displayed. The alt attribute provides alternative information for an image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader). The alt attribute is required if the href attribute is present.
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+ <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+ <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"> </map>
+02. coords
+coords 속성은 이미지 맵에서 영역의 좌표를 지정합니다.
+coords 속성은 shape 속성과 함께 사용되어 영역의 크기, 모양 및 위치를 지정합니다.
+The coords attribute specifies the coordinates of an area in an image-map. The coords attribute is used together with the shape attribute to specify the size, shape, and placement of an area.
+- 예시
+ <img src ="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+ <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+ <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"> </map>
+03. shape
+shape 속성은 영역의 모양을 지정합니다.
+shape 속성은 coords 속성과 함께 사용되어 영역의 크기, 모양 및 위치를 지정합니다.
+The shape attribute specifies the shape of an area. The shape attribute is used together with the coords attribute to specify the size, shape, and placement of an area.
+- 예시
+ <img src ="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+ <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+ <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"> </map>
+04. href
+href 속성은 영역에 대한 하이퍼 링크 대상을 지정합니다.
+href 속성이 없으면 'area'태그는 하이퍼 링크가 아닙니다.
+The href attribute specifies the hyperlink target for the area. If the href attribute is not present, the 'area' tag is not a hyperlink.
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+ <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+ <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"> </map>
+05. target
+target 속성은 링크 된 문서를 여는 위치를 지정합니다.
+href 속성이있는 경우에만 사용됩니다.
+The target attribute specifies where to open the linked document. Only used if the href attribute is present.
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun" target="_blank">
+ <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+ <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"> </map>
+06. download
+다운로드 속성은 사용자가 하이퍼 링크를 클릭 할 때 대상이 다운로드되도록 지정합니다.
+이 속성은 href 속성이 설정된 경우에만 사용됩니다.
+속성의 값은 다운로드 한 파일의 이름이됩니다.
+허용되는 값에는 제한이 없으며 브라우저는 자동으로 올바른 파일 확장명을 감지하여 파일 (.img, .pdf, .txt, .html 등)에 추가합니다.
+값을 생략하면 원래 파일 이름이 사용됩니다.
+The download attribute specifies that the target will be downloaded when a user clicks on the hyperlink. This attribute is only used if the href attribute is set. The value of the attribute will be the name of the downloaded file. There are no restrictions on allowed values, and the browser will automatically detect the correct file extension and add it to the file (.img, .pdf, .txt, .html, etc.). If the value is omitted, the original filename is used.
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+<map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" alt="Sun" href="info_about_the_sun.htm" download="sun">
+ <area shape="circle" coords="90,58,3" alt="Mercury" href="merglobe.gif" download="mercury">
+ <area shape="circle" coords="124,58,8" alt="Venus" href="information_about_the_planet_venus.txt" download="venus"></map>
+07. rel
+rel 속성은 현재 문서와 링크 된 문서 간의 관계를 지정합니다.
+href 속성이있는 경우에만 사용됩니다.
+The rel attribute specifies the relationship between the current document and the linked document. Only used if the href attribute is present.
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm" rel="alternate"> </map>
+08. hreflang
+hreflang 속성은 영역에서 대상 URL의 언어를 지정합니다.
+이 속성은 href 속성이 설정된 경우에만 사용됩니다.
+The hreflang attribute specifies the language of the target URL in the area. This attribute is only used if the href attribute is set.
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm" hreflang="en"> </map>
+09. type
+type 속성은 대상 URL의 인터넷 미디어 유형 (이전에는 MIME 유형으로 알려짐)을 지정합니다.
+이 속성은 href 속성이 설정된 경우에만 사용됩니다.
+The type attribute specifies the Internet media type (formerly known as MIME type) of the target URL. This attribute is only used if the href attribute is set.
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" alt="Sun" href="/images/sun.gif" type="image/gif"> </map>
+10. referrerpolicy
+
+
+- 예시
+
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+ <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+ <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"> </map>
+
+002. article
+'article'태그는 독립적 인 자체 콘텐츠를 지정합니다.
+기사는 독자적으로 이해해야하며 나머지 사이트와 독립적으로 기사를 배포 할 수 있어야합니다.
+The 'article' tag specifies independent, self-contained content. An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+- 속성: 없음
+- 예시
+ <article>
+ <h1>Google Chrome</h1>
+ <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p></article>
+
+003. aside
+'옆으로'태그는 콘텐츠가 배치 된 콘텐츠를 제외하고 일부 콘텐츠를 정의합니다.
+옆 콘텐츠는 주변 콘텐츠와 관련되어야합니다.
+The 'aside' tag defines some content aside from the content it is placed in. The aside content should be related to the surrounding content.
+- 속성: 없음
+- 예시
+ <p>My family and I visited The Epcot center this summer.</p>
+ <aside>
+ <h4>Epcot Center</h4>
+ <p>The Epcot Center is a theme park in Disney World, Florida.</p> </aside>
+
+004. bdi
+BDI는 Bi-Directional Isolation을 나타냅니다.
+'bdi'태그는 다른 텍스트와 다른 방향으로 서식이 지정된 텍스트의 일부를 분리합니다.
+이 요소는 사용자가 생성 한 내용을 알 수없는 방향으로 포함 할 때 유용합니다.
+BDI stands for Bi-Directional Isolation. The 'bdi' tag isolates a part of text that might be formatted in a different direction from other text outside it. This element is useful when embedding user-generated content with an unknown directionality.
+- 속성: 없음
+- 예시
+<ul>
+<li>User <bdi>hrefs</bdi>: 60 points</li>
+<li>User <bdi>jdoe</bdi>: 80 points</li>
+<li>User <bdi>إيان</bdi>: 90 points</li></ul>
+
+005. bdo
+bdo는 Bi-Directional Override를 나타냅니다.
+'bdo'태그는 현재 텍스트 방향을 덮어 쓰는 데 사용됩니다.
+bdo stands for Bi-Directional Override. The 'bdo' tag is used to override the current text direction.
+- 속성: 없음
+- 예시
+ <bdo dir="rtl">This text will go right-to-left.</bdo>
+
+006. canvas
+'canvas'태그는 스크립트 (보통 자바 스크립트)를 통해 즉석에서 그래픽을 그리는 데 사용됩니다.
+'canvas'태그는 그래픽의 컨테이너 일 뿐이므로 실제로 그래픽을 그리려면 스크립트를 사용해야합니다.
+The 'canvas' tag is used to draw graphics, on the fly, via scripting (usually JavaScript). The 'canvas' tag is only a container for graphics, you must use a script to actually draw the graphics.
+- 속성
+01. width
+
+
+- 예시
+ <canvas id="myCanvas" width="200" height="200" style="border:1px solid">
+02. height
+
+
+- 예시
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid">
+- 예시
+ <canvas id="myCanvas"></canvas>
+ <script> var canvas = document.getElementById("myCanvas"); var ctx = canvas.getContext("2d"); ctx.fillStyle = "#FF0000"; ctx.fillRect(0, 0, 80, 80); </script>
+
+007. data
+'data'태그는 주어진 내용을 컴퓨터가 읽을 수있는 번역으로 연결합니다.
+이 요소는 데이터 처리기에 대한 기계 판독 가능 값과 브라우저에서 렌더링하기위한 사람이 읽을 수있는 값을 모두 제공합니다.
+The 'data' tag links the given content with a machine-readable translation. This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.
+- 속성
+01. value
+
+
+- 예시
+
+- 예시
+ <ul>
+ <li><data value="21053">Cherry Tomato</data></li>
+ <li><data value="21054">Beef Tomato</data></li>
+ <li><data value="21055">Snack Tomato</data></li></ul>
+
+008. del
+'del'태그는 문서에서 삭제 된 텍스트를 정의합니다.
+The 'del' tag defines text that has been deleted from a document.
+- 속성
+01. cite
+cite 속성은 텍스트가 삭제 된 이유를 설명하는 문서의 URL을 지정합니다.
+The cite attribute specifies a URL to a document that explains the reason why the text was deleted.
+- 예시
+ <p><del cite="del_demo_cite.htm">This text has been deleted</del></p>
+02. datetime
+datetime 속성은 텍스트가 삭제 된 날짜와 시간을 지정합니다.
+The datetime attribute specifies the date and time when the text was deleted.
+- 예시
+ <p> <del datetime="2015-11-15T22:55:03Z">This text has been deleted</del> </p>
+- 예시
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+009. details
+'details'태그는 사용자가 필요에 따라 보거나 숨길 수있는 추가 세부 정보를 지정합니다.
+'details'태그는 사용자가 열고 닫을 수있는 대화 형 위젯을 만드는 데 사용할 수 있습니다.
+어떤 종류의 내용이라도 'details'태그 안에 넣을 수 있습니다.
+open 속성이 설정되어 있지 않으면 'details'요소의 내용을 볼 수 없습니다.
+The 'details' tag specifies additional details that the user can view or hide on demand. The 'details' tag can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the 'details' tag. The content of a 'details' element should not be visible unless the open attribute is set.
+- 속성
+01. open
+open 속성은 부울 속성입니다.
+이 매개 변수가 있으면 사용자에게 세부 정보가 표시되도록 지정합니다.
+The open attribute is a boolean attribute. When present, it specifies that the details should be visible (open) to the user.
+- 예시
+ <details open>
+ <summary>Copyright 1999-2014.</summary>
+ <p> - by Refsnes Data. All Rights Reserved.</p>
+ <p>All content and graphics on this web site are the property of the company Refsnes Data.</p> </details>
+- 예시
+ <details>
+ <summary>Copyright 1999-2018.</summary>
+ <p> - by Refsnes Data. All Rights Reserved.</p>
+ <p>All content and graphics on this web site are the property of the company Refsnes Data.</p> </details>
+
+010. dialog
+'dialog'태그는 대화 상자 또는 창을 정의합니다.
+'dialog'요소를 사용하면 웹 페이지에서 팝업 대화 상자 및 모달을 쉽게 만들 수 있습니다.
+The 'dialog' tag defines a dialog box or window. The 'dialog' element makes it easy to create popup dialogs and modals on a web page.
+- 속성
+01. open
+open 속성은 부울 속성입니다.
+대화 상자 요소가 존재하면 사용자가 대화 요소를 사용할 수 있도록 지정합니다.
+The open attribute is a boolean attribute. When present, it specifies that the dialog element is active and that the user can interact with it.
+- 예시
+ <table><tr>
+ <th>January <dialog open>This is an open dialog window</dialog></th>
+ <th>February</th>
+ <th>March</th></tr><tr>
+ <td>31</td>
+ <td>28</td>
+ <td>31</td></tr></table>
+- 예시
+ <table><tr>
+ <th>January <dialog open>This is an open dialog window</dialog></th>
+ <th>February</th>
+ <th>March</th></tr><tr>
+ <td>31</td>
+ <td>28</td>
+ <td>31</td></tr></table>
+
+011. figcaption
+'figcaption'태그는 'figure'요소에 대한 캡션을 정의합니다.
+The 'figcaption' tag defines a caption for a 'figure' element.
+- 속성: 없음
+- 예시
+ <figure>
+ <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+ <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption></figure>
+
+012. figure
+'figure'태그는 그림, 다이어그램, 사진, 코드 목록 등과 같은 자체 포함 된 내용을 지정합니다.
+'figure'요소의 내용은 주 흐름과 관련이 있지만 위치는 주 흐름과 관련이 없으며 제거하면 문서의 흐름에 영향을주지 않습니다.
+The 'figure' tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. While the content of the 'figure' element is related to the main flow, its position is independent of the main flow, and if removed it should not affect the flow of the document.
+- 속성: 없음
+- 예시
+ <figure>
+ <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228"> </figure>
+
+013. footer
+'footer'태그는 문서 또는 섹션의 바닥 글을 정의합니다.
+'footer'요소는 포함 요소에 대한 정보를 포함해야합니다.
+'footer'요소는 일반적으로 다음을 포함합니다.
+The 'footer' tag defines a footer for a document or section. A 'footer' element should contain information about its containing element. A 'footer' element typically contains:
+- 속성: 없음
+- 예시
+ <footer>
+ <p>Posted by: Hege Refsnes</p>
+ <p>Contact information: <a href="mailto:someone@example.com">
+ someone@example.com</a>.</p></footer>
+
+014. header
+'header'요소는 소개 내용 또는 탐색 링크 모음을위한 컨테이너를 나타냅니다.
+'header'요소는 일반적으로 다음을 포함합니다.
+The 'header' element represents a container for introductory content or a set of navigational links. A 'header' element typically contains:
+- 속성: 없음
+- 예시
+ <article>
+ <header>
+ <h1>Most important heading here</h1>
+ <h3>Less important heading here</h3>
+ <p>Some additional information here</p>
+ </header>
+ <p>Lorem Ipsum dolor set amet....</p> </article>
+
+015. ins
+'ins'태그는 문서에 삽입 된 텍스트를 정의합니다.
+The 'ins' tag defines a text that has been inserted into a document.
+- 속성
+01. cite
+cite 속성은 텍스트가 삽입 / 변경된 이유를 설명하는 문서의 URL을 지정합니다.
+The cite attribute specifies a URL to a document that explains the reason why the text was inserted/changed.
+- 예시
+ <p>This is a text. <ins cite="why_inserted.htm">This is an inserted text.</ins></p>
+02. datetime
+datetime 속성은 텍스트가 삽입 / 변경된 날짜와 시간을 지정합니다.
+The datetime attribute specifies the date and time of when the text was inserted/changed.
+- 예시
+ <p>This is a text. <ins datetime="2015-09-15T22:55:03Z">This is an inserted text.</ins></p>
+- 예시
+ <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+016. link
+'link'태그는 문서와 외부 리소스 간의 링크를 정의합니다.
+'link'태그는 외부 스타일 시트에 연결하는 데 사용됩니다.
+The 'link' tag defines a link between a document and an external resource. The 'link' tag is used to link to external style sheets.
+- 속성
+01. href
+href 속성은 외부 리소스 (주로 스타일 시트 파일)의 위치 (URL)를 지정합니다.
+The href attribute specifies the location (URL) of the external resource (most often a style sheet file).
+- 예시
+ <link rel="stylesheet" type="text/css" href="theme.css">
+02. crossorigin
+
+
+- 예시
+
+03. rel
+필수 rel 속성은 현재 문서와 링크 된 문서 / 자원 간의 관계를 지정합니다.
+The required rel attribute specifies the relationship between the current document and the linked document/resource.
+- 예시
+ <link rel="stylesheet" type="text/css" href="theme.css">
+04. media
+media 속성은 대상 자원이 최적화 할 매체 / 장치를 지정합니다.
+이 속성은 주로 CSS 스타일 시트와 함께 사용되어 다양한 미디어 유형에 대해 서로 다른 스타일을 지정합니다.
+미디어 속성은 여러 값을 허용 할 수 있습니다.
+The media attribute specifies what media/device the target resource is optimized for. This attribute is mostly used with CSS stylesheets to specify different styles for different media types. The media attribute can accept several values.
+- 예시
+ <head>
+ <link rel="stylesheet" type="text/css" href="theme.css">
+ <link rel="stylesheet" type="text/css" href="print.css" media="print"> </head>
+05. referrerpolicy
+
+
+- 예시
+
+06. nonce
+
+
+- 예시
+
+07. hreflang
+hreflang 속성은 링크 된 문서의 텍스트 언어를 지정합니다.
+이 속성은 href 속성이 설정된 경우에만 사용됩니다.
+The hreflang attribute specifies the language of the text in the linked document. This attribute is only used if the href attribute is set.
+- 예시
+ <link href="tag_link.asp" rel="parent" rev="subsection" hreflang="en">
+08. type
+type 속성은 링크 된 문서 / 자원의 인터넷 미디어 유형 (이전에는 MIME 유형으로 알려짐)을 지정합니다.
+이 속성은 href 속성이 설정된 경우에만 사용됩니다.
+The type attribute specifies the Internet media type (formerly known as MIME type) of the linked document/resource. This attribute is only used if the href attribute is set.
+- 예시
+ <head>
+ <link rel="stylesheet" type="text/css" href="theme.css"> </head>
+09. sizes
+sizes 특성은 시각적 미디어 용 아이콘 크기를 지정합니다.
+이 속성은 rel = "icon"인 경우에만 사용됩니다.
+The sizes attribute specifies the sizes of icons for visual media. This attribute is only used if rel="icon".
+- 예시
+ <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">
+- 예시
+ <head>
+ <link rel="stylesheet" type="text/css" href="theme.css"> </head>
+
+017. main
+'main'태그는 문서의 주요 내용을 지정합니다.
+'main'요소의 내용은 문서에 고유해야합니다.
+사이드 바, 탐색 링크, 저작권 정보, 사이트 로고 및 검색 양식과 같이 문서 전반에 걸쳐 반복되는 내용이 포함되어서는 안됩니다.
+The 'main' tag specifies the main content of a document. The content inside the 'main' element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.
+- 속성: 없음
+- 예시
+ <main>
+ <h1>Web Browsers</h1>
+ <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
+ <article>
+ <h1>Google Chrome</h1>
+ <p>Google Chrome is a free, open-source web browser developed by Google,
+ released in 2008.</p>
+ </article>
+ <article>
+ <h1>Internet Explorer</h1>
+ <p>Internet Explorer is a free web browser from Microsoft, released in 1995.</p>
+ </article>
+
+ <article>
+ <h1>Mozilla Firefox</h1>
+ <p>Firefox is a free, open-source web browser from Mozilla, released in 2004.</p>
+ </article></main>
+
+018. map
+'map'태그는 클라이언트 측 이미지 맵을 정의하는 데 사용됩니다.
+이미지 맵은 클릭 가능한 영역이있는 이미지입니다.
+'map'요소의 필수 name 속성은 'img'의 usemap 속성과 연결되어 있으며 이미지와 맵 사이의 관계를 만듭니다.
+'map'요소는 이미지 맵에서 클릭 가능한 영역을 정의하는 여러 '영역'요소를 포함합니다.
+The 'map' tag is used to define a client-side image-map. An image-map is an image with clickable areas. The required name attribute of the 'map' element is associated with the 'img''s usemap attribute and creates a relationship between the image and the map. The 'map' element contains a number of 'area' elements, that defines the clickable areas in the image map.
+- 속성
+01. name
+필수 name 속성은 이미지 맵의 이름을 지정합니다.
+name 속성은 'img'의 usemap 속성과 연관되어 있으며 이미지와 맵 사이의 관계를 생성합니다.
+The required name attribute specifies the name of an image-map. The name attribute is associated with the 'img''s usemap attribute and creates a relationship between the image and the map.
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+ <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+ <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"> </map>
+- 예시
+ <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+ <map name="planetmap">
+ <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+ <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+ <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"> </map>
+
+019. mark
+'mark'태그는 표시된 텍스트를 정의합니다.
+텍스트의 일부를 강조 표시하려면 '마크'태그를 사용하십시오.
+The 'mark' tag defines marked text. Use the 'mark' tag if you want to highlight parts of your text.
+- 속성: 없음
+- 예시
+ <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+020. meta
+메타 데이터는 데이터에 관한 데이터 (정보)입니다.
+'meta'태그는 HTML 문서에 대한 메타 데이터를 제공합니다.
+메타 데이터는 페이지에 표시되지 않지만 구문 분석이 가능합니다.
+메타 요소는 일반적으로 페이지 설명, 키워드, 문서 작성자, 마지막으로 수정 된 항목 및 기타 메타 데이터를 지정하는 데 사용됩니다.
+메타 데이터는 브라우저 (내용 표시 또는 페이지 재로드), 검색 엔진 (키워드) 또는 기타 웹 서비스에서 사용할 수 있습니다.
+HTML5는 웹 디자이너가 뷰포트 (웹 페이지의 사용자가 볼 수있는 영역), '메타'태그 (아래의 "뷰포트 설정"참조)를 통해 제어 할 수있게하는 메소드를 도입했습니다.
+Metadata is data (information) about data. The 'meta' tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata. The metadata can be used by browsers (how to display content or reload page), search engines (keywords), or other web services. HTML5 introduced a method to let web designers take control over the viewport (the user's visible area of a web page), through the 'meta' tag (See "Setting The Viewport" example below).
+- 속성
+01. name
+
+
+- 예시
+ <head>
+ <meta name="description" content="Free Web tutorials">
+ <meta name="keywords" content="HTML,CSS,JavaScript">
+ <meta name="author" content="John Doe">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head>
+02. http-equiv
+
+
+- 예시
+
+03. content
+content 속성은 http-equiv 또는 name 속성과 연관된 값을 제공합니다.
+The content attribute gives the value associated with the http-equiv or name attribute.
+- 예시
+ <head>
+ <meta name="description" content="Free Web tutorials">
+ <meta name="keywords" content="HTML,CSS,XML,JavaScript"> </head>
+04. charset
+charset 속성은 HTML 문서의 문자 인코딩을 지정합니다.
+The charset attribute specifies the character encoding for the HTML document.
+- 예시
+ <head>
+ <meta charset="UTF-8"> </head>
+- 예시
+ <head>
+ <meta charset="UTF-8">
+ <meta name="description" content="Free Web tutorials">
+ <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+ <meta name="author" content="John Doe">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head>
+
+021. meter
+'meter'태그는 알려진 범위 또는 분수 값 내에서 스칼라 측정을 정의합니다.
+이것은 계기라고도합니다.
+예 : 디스크 사용량, 쿼리 결과의 관련성 등
+The 'meter' tag defines a scalar measurement within a known range, or a fractional value. This is also known as a gauge. Examples: Disk usage, the relevance of a query result, etc.
+- 속성
+01. value
+필수 값 속성은 게이지의 현재 값 또는 "측정 된"값을 지정합니다.
+value 속성은 min 및 max 속성 값 사이에 있어야합니다.
+The required value attribute specifies the current, or "measured", value of the gauge. The value attribute must be between the min and max attribute values.
+- 예시
+ <meter min="0" low="40" high="90" max="100" value="95"></meter>
+02. min
+min 속성은 게이지의 하한을 지정합니다.
+min 속성 값은 max 속성 값보다 작아야합니다.
+지정하지 않으면 기본값은 0입니다.
+The min attribute specifies the lower bound of the gauge. The min attribute value must be less than the max attribute value. If unspecified, the default value is 0.
+- 예시
+ <meter min="0" low="40" high="90" max="100" value="95"></meter>
+03. max
+max 속성은 게이지의 상한선을 지정합니다.
+max 속성 값은 min 속성 값보다 커야합니다.
+지정하지 않으면 기본값은 1입니다.
+The max attribute specifies the upper bound of the gauge. The max attribute value must be greater than the min attribute value. If unspecified, the default value is 1.
+- 예시
+ <meter min="0" low="40" high="90" max="100" value="95"></meter>
+04. low
+낮은 속성은 게이지의 값이 낮은 값으로 간주되는 범위를 지정합니다.
+낮은 속성 값은 min 속성 값보다 커야하며 high W max 속성 값보다 작아야합니다.
+The low attribute specifies the range where the gauge's value is considered to be a low value. The low attribute value must be greater than the min attribute value, and it also must be less than the high and max attribute values.
+- 예시
+ <meter min="0" low="40" high="90" max="100" value="95"></meter>
+05. high
+high 속성은 게이지의 값이 높은 값으로 간주되는 범위를 지정합니다.
+높은 속성 값은 max 속성 값보다 작아야하며 low 및 min 속성 값보다 커야합니다.
+The high attribute specifies the range where the gauge's value is considered to be a high value. The high attribute value must be less than the max attribute value, and it also must be greater than the low and min attribute values.
+- 예시
+ <meter min="0" low="40" high="90" max="100" value="95"></meter>
+06. optimum
+최적 속성은 게이지의 값이 최적의 값으로 간주되는 범위를 지정합니다.
+The optimum attribute specifies the range where the gauge's value is considered to be an optimal value.
+- 예시
+ <meter value="0.3" high="0.9" low="0.1" optimum="0.5"></meter>
+- 예시
+ <meter value="2" min="0" max="10">2 out of 10</meter><br> <meter value="0.6">60%</meter>
+
+022. nav
+'nav'태그는 일련의 탐색 링크를 정의합니다.
+문서의 모든 링크가 'nav'요소 내에 있어야하는 것은 아닙니다.
+'nav'요소는 탐색 링크의 주요 블록에만 사용됩니다.
+The 'nav' tag defines a set of navigation links. Notice that NOT all links of a document should be inside a 'nav' element. The 'nav' element is intended only for major block of navigation links.
+- 속성: 없음
+- 예시
+ <nav>
+ <a href="/html/">HTML</a> |
+ <a href="/css/">CSS</a> |
+ <a href="/js/">JavaScript</a> |
+ <a href="/jquery/">jQuery</a> </nav>
+
+023. noscript
+'noscript'태그는 브라우저에서 스크립트를 사용하지 않거나 스크립트를 지원하지 않는 브라우저가있는 사용자를위한 대체 콘텐츠를 정의합니다.
+'noscript'요소는 '머리'와 '본문'에서 모두 사용할 수 있습니다.
+The 'noscript' tag defines an alternate content for users that have disabled scripts in their browser or have a browser that doesn't support script. The 'noscript' element can be used in both 'head' and 'body'.
+- 속성: 없음
+- 예시
+<script>document.write("Hello World!")</script><noscript>Your browser does not support JavaScript!</noscript>
+
+024. object
+'object'태그는 HTML 문서 내에 포함 된 객체를 정의합니다.
+이 요소를 사용하여 오디오, 비디오, Java 애플릿, ActiveX, PDF 및 Flash와 같은 멀티미디어를 웹 페이지에 포함 할 수 있습니다.
+'object'태그를 사용하여 다른 웹 페이지를 HTML 문서에 포함 할 수도 있습니다.
+'param'태그를 사용하여 'object'태그가 삽입 된 플러그인에 매개 변수를 전달할 수 있습니다.
+The 'object' tag defines an embedded object within an HTML document. Use this element to embed multimedia (like audio, video, Java applets, ActiveX, PDF, and Flash) in your web pages. You can also use the 'object' tag to embed another webpage into your HTML document. You can use the 'param' tag to pass parameters to plugins that have been embedded with the 'object' tag.
+- 속성
+01. data
+data 속성은 오브젝트가 사용할 자원의 URL을 지정합니다.
+The data attribute specifies the URL of the resource to be used by the object.
+- 예시
+ <object width="400" height="400" data="helloworld.swf"></object>
+02. type
+type 속성은 객체의 인터넷 미디어 유형 (이전에는 MIME 유형으로 알려짐)을 지정합니다.
+The type attribute specifies the Internet media type (formerly known as MIME type) of the object.
+- 예시
+ <object width="400" height="400" data="helloworld.swf" type="application/vnd.adobe.flash-movie"></object>
+03. typemustmatch
+
+
+- 예시
+
+04. name
+name 속성은 'object'요소의 이름을 지정합니다.
+name 속성은 JavaScript에서 'object'요소를 참조하는 데 사용됩니다 (대신 id 속성을 사용하여 참조).
+The name attribute specifies the name of an 'object' element. The name attribute is used for referencing an 'object' element in JavaScript (an alternative, is to reference it by using its id attribute).
+- 예시
+<object data="helloworld.swf" width="400" height="400"name="obj1"></object>
+05. form
+form 속성은 'object'요소가 속한 하나 이상의 양식을 지정합니다.
+The form attribute specifies one or more forms the 'object' element belongs to.
+- 예시
+ <form action="/action_page.php" id="form1">
+ First name: <input type="text" name="fname"><br>
+ <input type="submit" value="Submit"> </form>
+ <object data="helloworld.swf" height="400" width="400" form="form1" name="obj1"></object>
+06. width
+width 속성은 객체의 폭을 픽셀 단위로 지정합니다.
+The width attribute specifies the width of the object, in pixels.
+- 예시
+ <object data="helloworld.swf" width="400" height="400"></object>
+07. height
+height 속성은 객체의 높이를 픽셀 단위로 지정합니다.
+The height attribute specifies the height of the object, in pixels.
+- 예시
+ <object data="helloworld.swf" height="400" width="400"></object>
+- 예시
+ <object width="400" height="400" data="helloworld.swf"></object>
+
+025. output
+'output'태그는 계산 결과 (예 : 스크립트에 의해 수행 된 것)를 나타냅니다.
+The 'output' tag represents the result of a calculation (like one performed by a script).
+- 속성
+01. for
+for 속성은 계산 결과와 계산에 사용 된 요소 사이의 관계를 지정합니다.
+The for attribute specifies the relationship between the result of the calculation, and the elements used in the calculation.
+- 예시
+ <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+ <input type="range" id="a" value="50">100
+ +<input type="number" id="b" value="50">
+ =<output name="x" for="a b"></output> </form>
+02. form
+form 속성은 'output'요소가 속한 하나 이상의 양식을 지정합니다.
+The form attribute specifies one or more forms the 'output' element belongs to.
+- 예시
+ <form action="/action_page.php" id="numform" oninput="x.value=parseInt(a.value)+parseInt(b.value)">0 <input type="range" id="a" name="a" value="50">100 +<input type="number" id="b" name="b" value="50"> <input type="submit"> </form>
+ <output form="numform" name="x" for="a b"></output>
+03. name
+name 속성은 'output'엘리먼트의 이름을 지정한다.
+name 속성은 양식 데이터를 제출 한 후 참조하거나 JavaScript의 요소를 참조하는 데 사용됩니다.
+The name attribute specifies the name of an 'output' element. The name attribute is used to reference form data after it has been submitted, or to reference the element in a JavaScript.
+- 예시
+ <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+ <input type="range" id="a" value="50">100
+ +<input type="number" id="b" value="50">
+ =<output name="x" for="a b"></output> </form>
+- 예시
+ <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+ <input type="range" id="a" value="50">100
+ +<input type="number" id="b" value="50">
+ =<output name="x" for="a b"></output> </form>
+
+026. param
+'param'태그는 'object'요소로 삽입 된 플러그인에 대한 매개 변수를 정의하는 데 사용됩니다.
+The 'param' tag is used to define parameters for plugins embedded with an 'object' element.
+- 속성
+01. name
+name 속성은 'param'요소의 이름을 지정합니다.
+이 속성은 value 속성과 함께 사용되어 'object'태그로 지정된 플러그인에 대한 매개 변수를 지정합니다.
+The name attribute specifies the name of a 'param' element. This attribute is used together with the value attribute to specify parameters for the plugin specified with the 'object' tag.
+- 예시
+ <object data="horse.wav">
+ <param name="autoplay" value="true"> </object>
+02. value
+value 속성은 'param'요소의 값을 지정합니다.
+이 속성은 name 속성과 함께 사용되어 'object'태그로 지정된 플러그인에 대한 매개 변수를 지정합니다.
+The value attribute specifies the value of a 'param' element. This attribute is used together with the name attribute to specify parameters for the plugin specified with the 'object' tag.
+- 예시
+ <object data="horse.wav">
+ <param name="autoplay" value="true"> </object>
+- 예시
+ <object data="horse.wav">
+ <param name="autoplay" value="true"> </object>
+
+027. picture
+'picture'태그는 웹 개발자가 이미지 리소스를보다 유연하게 지정할 수있게합니다.
+'그림'요소의 가장 일반적인 용도는 반응 형 디자인의 예술 방향입니다.
+뷰포트 너비를 기준으로 확대 또는 축소 된 이미지 하나가있는 대신 여러 이미지를 사용하여 브라우저 뷰포트를보다 자세히 채울 수 있습니다.
+'picture'요소는 하나 이상의 'source'태그와 'img'태그라는 두 개의 다른 태그를 포함합니다.
+The 'picture' tag gives web developers more flexibility in specifying image resources. The most common use of the 'picture' element will be for art direction in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport. The 'picture' element holds two different tags: one or more 'source' tags and one 'img' tag.
+- 속성: 없음
+- 예시
+ <picture>
+ <source media="(min-width: 650px)" srcset="img_pink_flowers.jpg">
+ <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+ <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;"></picture>
+
+028. progress
+'진행'태그는 작업 진행률을 나타냅니다.
+The 'progress' tag represents the progress of a task.
+- 속성
+01. value
+value 속성은 완료된 작업의 양을 지정합니다.
+The value attribute specifies how much of the task has been completed.
+- 예시
+ <progress value="22" max="100"></progress>
+02. max
+max 속성은 작업에 필요한 작업량의 합계를 지정합니다.
+The max attribute specifies how much work the task requires in total.
+- 예시
+ <progress value="22" max="100"></progress>
+- 예시
+ <progress value="22" max="100"></progress>
+
+029. rb
+
+
+- 속성: 없음
+- 예시
+
+
+030. rp
+'rp'태그는 루비 텍스트 주위에 괄호를 제공하고 루비 주석을 지원하지 않는 브라우저에 표시되도록 사용될 수 있습니다.
+'ruby'와 'rt'태그와 함께 'rp'태그를 사용하십시오 : 'ruby'요소는 설명 / 발음이 필요한 하나 이상의 문자와 그 정보를 제공하는 'rt'요소와 루비 주석을 지원하지 않는 브라우저에 대해 표시 할 내용을 정의하는 선택적 'rp'요소.
+The 'rp' tag can be used to provide parentheses around a ruby text, to be shown by browsers that do not support ruby annotations. Use the 'rp' tag together with the 'ruby' and the 'rt' tags: The 'ruby' element consists of one or more characters that needs an explanation/pronunciation, and an 'rt' element that gives that information, and an optional 'rp' element that defines what to show for browsers that not support ruby annotations.
+- 속성: 없음
+- 예시
+ <ruby> 漢 <rt><rp>(</rp>ㄏㄢˋ<rp>)</rp></rt> </ruby>
+
+031. rt
+'rt'태그는 루비 주석의 문자 (동아시아 타이포그래피)에 대한 설명 또는 발음을 정의합니다.
+'ruby'및 'rp'태그와 함께 'rt'태그를 사용하십시오.
+'ruby'요소는 설명 / 발음이 필요한 하나 이상의 문자와 해당 정보를 제공하는 'rt'요소 및 루비 주석을 지원하지 않는 브라우저에 대해 표시 할 내용을 정의하는 선택적 'rp'요소.
+The 'rt' tag defines an explanation or pronunciation of characters (for East Asian typography) in a ruby annotation. Use the 'rt' tag together with the 'ruby' and the 'rp' tags: The 'ruby' element consists of one or more characters that needs an explanation/pronunciation, and an 'rt' element that gives that information, and an optional 'rp' element that defines what to show for browsers that not support ruby annotations.
+- 속성: 없음
+- 예시
+ <ruby> 漢 <rt> ㄏㄢˋ </rt> </ruby>
+
+032. rtc
+
+
+- 속성: 없음
+- 예시
+
+
+033. ruby
+'ruby'태그는 루비 주석을 지정합니다.
+루비 주석은 주 텍스트에 첨부 된 작은 추가 텍스트로 해당 문자의 발음이나 의미를 나타냅니다.
+이러한 종류의 주석은 일본어 간행물에서 자주 사용됩니다.
+'rt'및 / 또는 'rp'태그와 함께 'ruby'태그를 사용하십시오 : 'ruby'요소는 설명 / 발음이 필요한 하나 이상의 문자와 그 정보를 제공하는 'rt'요소로 구성됩니다.
+루비 주석을 지원하지 않는 브라우저에 대해 표시 할 내용을 정의하는 선택적 'rp'요소가 있습니다.
+The 'ruby' tag specifies a ruby annotation. A ruby annotation is a small extra text, attached to the main text to indicate the pronunciation or meaning of the corresponding characters. This kind of annotation is often used in Japanese publications. Use the 'ruby' tag together with the 'rt' and/or the 'rp' tags: The 'ruby' element consists of one or more characters that needs an explanation/pronunciation, and an 'rt' element that gives that information, and an optional 'rp' element that defines what to show for browsers that do not support ruby annotations.
+- 속성: 없음
+- 예시
+ <ruby> 漢 <rt> ㄏㄢˋ </rt> </ruby>
+
+034. script
+'script'태그는 클라이언트 측 스크립트 (JavaScript)를 정의하는 데 사용됩니다.
+'script'요소는 스크립트 문을 포함하거나 src 특성을 통해 외부 스크립트 파일을 가리 킵니다.
+자바 스크립트의 일반적인 용도는 이미지 조작, 폼 유효성 검사 및 콘텐츠의 동적 변경입니다.
+The 'script' tag is used to define a client-side script (JavaScript). The 'script' element either contains scripting statements, or it points to an external script file through the src attribute. Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.
+- 속성
+01. src
+src 속성은 외부 스크립트 파일의 URL을 지정합니다.
+웹 사이트의 여러 페이지에서 동일한 JavaScript를 실행하려면 동일한 스크립트를 반복 작성하는 대신 외부 JavaScript 파일을 작성해야합니다.
+확장자가 .js 인 스크립트 파일을 저장 한 다음 'script'태그의 src 속성을 사용하여 참조하십시오.
+The src attribute specifies the URL of an external script file. If you want to run the same JavaScript on several pages in a web site, you should create an external JavaScript file, instead of writing the same script over and over again. Save the script file with a .js extension, and then refer to it using the src attribute in the 'script' tag.
+- 예시
+ <script src="myscripts.js"></script>
+02. type
+type 속성은 스크립트의 인터넷 미디어 유형 (이전에는 MIME 유형으로 알려짐)을 지정합니다.
+type 속성은 'script'와 '/ script'태그 사이의 내용을 식별합니다.
+미디어 유형은 미디어 유형과 하위 유형의 두 부분으로 구성됩니다.
+JavaScript의 경우 미디어 유형은 "application / javascript"입니다.
+The type attribute specifies the Internet media type (formerly known as MIME type) of a script. The type attribute identifies the content between the 'script' and '/script' tags. The media type consists of two parts: one media type and one subtype. For JavaScript, the media type is "application/javascript".
+- 예시
+ <script type="application/javascript"> document.getElementById("demo").innerHTML = "Hello JavaScript!";</script>
+03. charset
+charset 속성은 외부 스크립트 파일에 사용 된 문자 인코딩을 지정합니다.
+charset 속성은 외부 스크립트 파일의 문자 인코딩이 HTML 문서의 인코딩과 다른 경우에 사용됩니다.
+The charset attribute specifies the character encoding used in an external script file. The charset attribute is used when the character encoding in an external script file differs from the encoding in the HTML document.
+- 예시
+ <script src="myscripts.js" charset="UTF-8"></script>
+04. async
+async 속성은 부울 속성입니다.
+스크립트가 존재할 때 스크립트는 사용 가능한 즉시 비동기 적으로 실행되도록 지정합니다.
+The async attribute is a boolean attribute. When present, it specifies that the script will be executed asynchronously as soon as it is available.
+- 예시
+ <script src="demo_async.js" async></script>
+05. defer
+defer 속성은 부울 속성입니다.
+있으면 페이지가 구문 분석을 완료 할 때 스크립트가 실행되도록 지정합니다.
+The defer attribute is a boolean attribute. When present, it specifies that the script is executed when the page has finished parsing.
+- 예시
+ <script src="demo_defer.js" defer></script>
+06. crossorigin
+
+
+- 예시
+
+07. nonce
+
+
+- 예시
+
+- 예시
+ <script>document.getElementById("demo").innerHTML = "Hello JavaScript!"; </script>
+
+035. section
+'section'태그는 문서의 챕터, 머리말, 꼬리말 또는 문서의 다른 섹션과 같은 섹션을 정의합니다.
+The 'section' tag defines sections in a document, such as chapters, headers, footers, or any other sections of the document.
+- 속성: 없음
+- 예시
+ <section>
+ <h1>WWF</h1>
+ <p>The World Wide Fund for Nature (WWF) is....</p> </section>
+
+036. style
+'style'태그는 HTML 문서의 스타일 정보를 정의하는 데 사용됩니다.
+'style'요소 안에는 브라우저에서 HTML 요소를 렌더링하는 방법을 지정합니다.
+각 HTML 문서는 여러 '스타일'태그를 포함 할 수 있습니다.
+The 'style' tag is used to define style information for an HTML document. Inside the 'style' element you specify how HTML elements should render in a browser. Each HTML document can contain multiple 'style' tags.
+- 속성
+01. media
+media 속성은 CSS 스타일이 최적화 된 미디어 / 장치를 지정합니다.
+이 속성은 스타일이 iPhone과 같은 특수 장치, 음성 또는 인쇄 매체 용임을 지정하는 데 사용됩니다.
+The media attribute specifies what media/device the CSS style is optimized for. This attribute is used to specify that the style is for special devices (like iPhone), speech or print media.
+- 예시
+ <style media="print"> h1 {color:#000000;} p {color:#000000;} body {background-color:#FFFFFF;}
+</style>
+02. nonce
+
+
+- 예시
+
+03. type
+type 속성은 'style'태그의 인터넷 미디어 유형 (이전에는 MIME 유형으로 알려짐)을 지정합니다.
+type 속성은 'style'과 '/ style'태그 사이의 내용을 식별합니다.
+"text / css"값은 콘텐츠가 CSS임을 나타냅니다.
+The type attribute specifies the Internet media type (formerly known as MIME type) of the 'style' tag. The type attribute identifies the content between the 'style' and '/style' tags. The value "text/css" indicates that the content is CSS.
+- 예시
+ <style type="text/css"> h1 {color:red;} p {color:blue;} </style>
+- 예시
+ <html> <head> <style> h1 {color:red;} p {color:blue;} </style> </head> <body> <h1>A heading</h1> <p>A paragraph.</p> </body> </html>
+
+037. summary
+'summary'태그는 'details'요소의 보이는 머리글을 정의합니다.
+제목을 클릭하여 세부 정보를 보거나 숨길 수 있습니다.
+The 'summary' tag defines a visible heading for the 'details' element. The heading can be clicked to view/hide the details.
+- 속성: 없음
+- 예시
+ <details>
+ <summary>Copyright 1999-2014.</summary>
+ <p> - by Refsnes Data. All Rights Reserved.</p>
+ <p>All content and graphics on this web site are the property of the company Refsnes Data.</p> </details>
+
+038. template
+'template'태그는 클라이언트에서 숨겨진 내용을 보유합니다.
+'template'태그 안의 내용은 렌더링되지 않습니다.
+내용은 JavaScript를 사용하여 나중에 보거나 렌더링 할 수 있습니다.
+반복적으로 사용할 HTML 코드가있을 때 'template'태그를 사용하십시오.
+그러나 요청할 때까지는 사용하지 마십시오.
+'template'태그없이이를 수행하려면 브라우저가 코드를 렌더링하지 못하도록 JavaScript로 HTML 코드를 만들어야합니다.
+The 'template' tag holds its content hidden from the client. Content inside a 'template' tag will not be rendered. The content can be visible and rendered later by using JavaScript. Use the 'template' tag when you have HTML code you want to use over and over again, but not until you ask for it. To do this without the 'template' tag, you have to create the HTML code with JavaScript to prevent the browser from rendering the code.
+- 속성: 없음
+- 예시
+ <template>
+ <h2>Flower</h2>
+ <img src="img_white_flower.jpg"></template>
+
+039. thead
+'thead'태그는 HTML 표의 머리글 내용을 그룹화하는 데 사용됩니다.
+'thead'요소는 'tbody'및 'tfoot'요소와 함께 사용되어 표 (머리글, 본문, 바닥 글)의 각 부분을 지정합니다.
+The 'thead' tag is used to group header content in an HTML table. The 'thead' element is used in conjunction with the 'tbody' and 'tfoot' elements to specify each part of a table (header, body, footer).
+- 속성: 없음
+- 예시
+<table>
+ <thead>
+ <tr>
+ <th>Month</th>
+<th>Savings</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>January</td>
+ <td>$100</td>
+ </tr>
+ <tr>
+ <td>February</td>
+ <td>$80</td>
+ </tr>
+ </tbody>
+ <tfoot>
+ <tr>
+ <td>Sum</td>
+ <td>$180</td>
+ </tr>
+ </tfoot></table>
+
+040. time
+'시간'태그는 사람이 읽을 수있는 날짜 / 시간을 정의합니다.
+이 요소는 날짜와 시간을 컴퓨터가 읽을 수있는 방식으로 인코딩하여 사용자 에이전트가 생일 달력이나 예정된 이벤트를 사용자의 달력에 추가 할 수 있도록 해주 며 검색 엔진이 더 똑똑한 검색 결과를 생성 할 수 있도록합니다.
+The 'time' tag defines a human-readable date/time. This element can also be used to encode dates and times in a machine-readable way so that user agents can offer to add birthday reminders or scheduled events to the user's calendar, and search engines can produce smarter search results.
+- 속성
+01. datetime
+datetime 속성은 'time'요소의 기계가 읽을 수있는 날짜 / 시간을 나타냅니다.
+법적 날짜 및 시간의 예 :
+The datetime attribute represent the machine-readable date/time of the 'time' element. Examples of legal dates and times:
+- 예시
+ <p>I have a date on <time datetime="2017-02-14">Valentines day</time>.</p>
+- 예시
+ <p>We open at <time>10:00</time> every morning.</p> <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+041. wbr
+'wbr'(Word Break Opportunity) 태그는 텍스트에서 줄 바꿈을 추가 할 수있는 부분을 지정합니다.
+The 'wbr' (Word Break Opportunity) tag specifies where in a text it would be ok to add a line-break.
+- 속성: 없음
+- 예시
+ <p> To learn AJAX, you must be familiar with the XML<wbr>Http<wbr>Request Object. </p>
