@@ -1,5 +1,5 @@
-# 귀찮아
+# 2020 Report Project
 
-과제 노가다하기 싫어서 짠 코드  
-아 집에 가고싶다.  
-갓글 번역 api님 감사합니다.
+### Information
+- [*크롤링 타겟 사이트*](https://html.spec.whatwg.org/multipage/indices.html)
+- 귀찮다...
