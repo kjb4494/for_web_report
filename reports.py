@@ -13,31 +13,25 @@ TARGET_ELEMENTS_LIST = ['a', 'img', 'br', 'address']
 
 
 def get_reports():
-    soup = crawler.get_parsed_html()
-    tables = soup.find_all('table')
-    elements_table = tables[Index.ELEMENTS.value]
-    elements_dictionary = crawler.get_elements_dictionary(elements_table, TARGET_ELEMENTS_LIST)
+    # soup = crawler.get_parsed_html()
+    # tables = soup.find_all('table')
+    # elements_table = tables[Index.ELEMENTS.value]
+    # elements_dictionary = crawler.get_elements_dictionary(elements_table, TARGET_ELEMENTS_LIST)
+    #
+    # target_attributes_list = data_processor.combine_list(
+    #     *[element_info['attributes'] for element_name, element_info in elements_dictionary.items()]
+    # )
+    #
+    # attributes_table = tables[Index.ATTRIBUTES.value]
+    # attributes_dictionary = crawler.get_attributes_dictionary(attributes_table, target_attributes_list)
 
-    target_attributes_list = data_processor.combine_list(
-        *[element_info['attributes'] for element_name, element_info in elements_dictionary.items()]
-    )
-
-    attributes_table = tables[Index.ATTRIBUTES.value]
-    attributes_dictionary = crawler.get_attributes_dictionary(attributes_table, target_attributes_list)
-
-    for idx, element in TARGET_ELEMENTS_LIST:
-        pass
-
-
-def test_code():
-    test_tag = W3School('datalist')
-    print(test_tag.description)
-    print('---')
-    print(test_tag.example)
-    print('---')
-    print(test_tag.attribute)
+    for idx, element in enumerate(TARGET_ELEMENTS_LIST):
+        w3_school = W3School(element)
+        print(w3_school.example)
+        print(w3_school.attribute)
+        print(w3_school.description)
 
 
 if __name__ == '__main__':
-    # get_reports()
-    test_code()
+    get_reports()
+

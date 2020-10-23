@@ -58,6 +58,10 @@ class W3School:
     def get_attribute_example(attribute):
         url = 'https://www.w3schools.com/tags/att_' + attribute + '.asp'
         req = requests.get(url)
+
+        if req.status_code == 404:
+            return ''
+
         html = req.text
         soup = BeautifulSoup(html, 'html.parser')
 
