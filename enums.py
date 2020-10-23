@@ -1,0 +1,26 @@
+from enum import Enum
+
+
+class Index(Enum):
+    ELEMENTS = 0
+    ELEMENT_CONTENT_CATEGORIES = 1
+    ATTRIBUTES = 2
+    ELEMENT_INTERFACES = 3
+    ALL_INTERFACES = 4
+    EVENTS = 5
+    MIME_TYPES = 6
+
+
+class ELEMENTS(Enum):
+    DESCRIPTION = 0
+    CATEGORIES = 1
+    PARENTS = 2
+    CHILDREN = 3
+    ATTRIBUTES = 4
+    INTERFACE = 5
+
+
+class ATTRIBUTES(Enum):
+    ELEMENTS = 0
+    DESCRIPTION = 1
+    VALUE = 2
